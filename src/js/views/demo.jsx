@@ -5,7 +5,7 @@ import { Context } from "../store/appContext.js";
 
 import "../../styles/demo.css";
 
-export const Demo = () => {
+export const Naves = () => {
 	return (
 		<div className="container flex-row">
 		<h1>Naves</h1>

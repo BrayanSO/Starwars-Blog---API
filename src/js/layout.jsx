@@ -3,9 +3,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop.jsx";
 
 import { Home } from "./views/home.jsx";
-import { Demo } from "./views/demo.jsx";
-import { Single } from "./views/single.jsx";
-//import {Planets} from ".views/planets.jsx"
+import { Naves } from "./views/demo.jsx";
+import { Films } from "./views/films.jsx";
+import { Planets} from "./views/planets.jsx";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar.jsx";
@@ -24,8 +24,10 @@ const Layout = () => {
 					<Navbar />
 					<Routes>
 						<Route path="/" element={<Home />} />
-						<Route path="/demo" element={<Demo />} />
-						<Route path="/single/:theid" element={<Single />} />
+						<Route path="/naves" element={<Naves />} />
+						<Route path="/films" element={<Films />} />
+						<Route path="/planets" element={<Planets/>} />
+						<Route path="/films/:theid" element={<Films/>} />
 						<Route path="*" element={<h1>Not found!</h1>} />
 					</Routes>
 					<Footer />
