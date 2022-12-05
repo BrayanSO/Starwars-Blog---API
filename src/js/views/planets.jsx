@@ -8,6 +8,7 @@ export const Planets = () => {
 	return (
 		<div className="container flex-row">
 		<h1>Planets</h1>
+		<button className="btn btn-dark" onClick={() => actions.getPlanets()}> cargar plantes</button>
 		<ul>
 			{store.planets.map((planet)=><li>{planet.name}</li>)}
 		</ul>
