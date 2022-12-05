@@ -3,16 +3,15 @@ import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext.jsx";
 
-export const Films = props => {
-	const { store, actions } = useContext(Context);
-	const params = useParams();
+export const Films = () => {
+	const {store, actions}= useContext (Context);
 	return (
-		<div className="container">
-	 <h1> Films</h1>
+		<div className="container flex-row">
+		<h1>Films</h1>
+		<button className="btn btn-dark" onClick={() => actions.getFilms()}> cargar Peliculas</button>
+		<ul>
+			{store.films.map((films)=><li>{films.title}</li>)}
+		</ul> 
 		</div>
 	);
-};
-
-Films.propTypes = {
-	match: PropTypes.object
 };
