@@ -1,16 +1,14 @@
 import React, {useState, useEffect, useContext} from "react";
 import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 import { Context } from "../store/appContext.jsx";
-
-export const Planets = () => {
-	const {store, actions}= useContext (Context);
+export const PlanetsDetail = () => {
+	const {planetid}=useParams();
 	return (
 		<div className="container flex-row">
 		<h1>Planets</h1>
-		<ul>
-			{store.planets.map((planet)=><li>{planet.name}</li>)}
-		</ul>
+		<h2>planet #{planetid}</h2>
 		</div>
 	);
 };
