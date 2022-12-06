@@ -7,6 +7,7 @@ import { Naves } from "./views/naves.jsx";
 import { Films } from "./views/films.jsx";
 import { Planets} from "./views/planets.jsx";
 import { PlanetsDetail } from "./views/planetsDetail.jsx";
+import {CardList} from "./component/cardList.jsx";
 
 
 import injectContext from "./store/appContext.jsx";
