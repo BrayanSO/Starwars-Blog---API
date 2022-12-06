@@ -15,8 +15,8 @@ const CardList=(props) => {
     <h5 class="card-title">{props.title}</h5>
     <p class="card-text">{props.text}
     </p>
-    <Link to={`${props.type}/${props.id}`} class="btn btn-primary">
-        Go somewhere
+    <Link to={`/${props.type}/${props.id}`} class="btn btn-dark">
+        Ver Detalles
         </Link>
   </div>
 </div>

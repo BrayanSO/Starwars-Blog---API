@@ -12,9 +12,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 					return
 				}
 				let data = await resp.json()
-				console.log({
-					data
-				})
 				let newStore = {
 					...getStore()
 				}
