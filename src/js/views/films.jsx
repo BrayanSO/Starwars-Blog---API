@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import CardList from "../component/cardList.jsx";
 import { Link } from "react-router-dom";
-
-
 import { Context } from "../store/appContext.jsx";
 
 export const Films = () => {

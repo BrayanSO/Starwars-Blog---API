@@ -3,24 +3,24 @@ import { Link } from "react-router-dom";
 import CardList from "../component/cardList.jsx";
 import { Context } from "../store/appContext.jsx";
 
-export const Planets = () => {
+export const Starships = () => {
 	const {store, actions}= useContext (Context);
 	useEffect(()=> {
-		actions.getStarWars("planets")
+		actions.getStarWars("starships")
 	  },[]);
 	return (
 		<div className="container">
-		<h1>Planets</h1>
+		<h1>Starships</h1>
 		<div className="container">
 			<div className="row">			
-			{store.planets.map((planet) => (
-			<div key={planet.uid} className="col col-md-4">
+			{store.starships.map((starships) => (
+			<div key={starships.uid} className="col col-md-4">
 				<CardList
-				id={planet.uid}
-				type="planets"
-				title={planet.name}
-				text= "A StarWars Planet"
-				img={`https://starwars-visualguide.com/assets/img/planets/${planet.uid}.jpg`}
+				id={starships.uid}
+				type="starships"
+				title={starships.name}
+				text= "StarWars Ships"
+				img={`https://starwars-visualguide.com/assets/img/starships/${starships.uid}.jpg`}
 				/>
 				</div>
 				))}
@@ -29,3 +29,4 @@ export const Planets = () => {
 		</div>
 	);
 };
+``

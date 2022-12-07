@@ -3,10 +3,12 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop.jsx";
 
 import { Home } from "./views/home.jsx";
-import { Naves } from "./views/naves.jsx";
-import { Films } from "./views/films.jsx";
 import { Planets} from "./views/planets.jsx";
 import { PlanetsDetail } from "./views/planetsDetail.jsx";
+import { Films } from "./views/films.jsx";
+import { FilmsDetail } from "./views/filmsDetail.jsx";
+import { Starships } from "./views/starships.jsx";
+import { StarshipsDetail } from "./views/starshipsDetail.jsx";
 import {CardList} from "./component/cardList.jsx";
 
 
@@ -27,11 +29,12 @@ const Layout = () => {
 					<Navbar />
 					<Routes>
 						<Route path="/" element={<Home />} />
-						<Route path="/naves" element={<Naves />} />
-						<Route path="/films" element={<Films />} />
+						<Route path="/starships" element={<Starships/>} />
+						<Route path="/starships/:starshipsid" element={<StarshipsDetail/>} />
 						<Route path="/planets" element={<Planets/>} />
 						<Route path="/planets/:planetid" element={<PlanetsDetail/>} />
-						<Route path="/films/:theid" element={<Films/>} />
+						<Route path="/films" element={<Films />} />
+						<Route path="/films/:filmsid" element={<FilmsDetail/>} />
 						<Route path="*" element={<h1>Not found!</h1>} />
 					</Routes>
 					<Footer />

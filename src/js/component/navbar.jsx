@@ -5,7 +5,8 @@ export const Navbar = () => {
   const [links, setLinks]=useState([
     { text:"Planets", link:"/planets"},
     { text:"Films", link:"/films"},
-    { text:"Naves", link:"/naves"}
+    { text:"Starships", link:"/starships"}
+
   ]);
   return (
     <nav className="navbar navbar-light navbar-expand-md bg-light">
@@ -24,7 +25,7 @@ export const Navbar = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNavDropdown">
+        <div  className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav">
            { links.map((link) => (
               <li className="nav-item">

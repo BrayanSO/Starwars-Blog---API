@@ -2,7 +2,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			planets: [],
-			films:[]
+			films:[],
+			starships:[]
 		},
 		actions: {
 			getStarWars:async (resource, pagination= {})=> {

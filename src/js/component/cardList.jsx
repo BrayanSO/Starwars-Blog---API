@@ -9,13 +9,13 @@ const CardList=(props) => {
     img
     */
     return(
-        <div class="card">
-  <img src={props.img} class="card-img-top" alt={props.type.toUpperCase() + " " + props.title}/>
-  <div class="card-body">
-    <h5 class="card-title">{props.title}</h5>
-    <p class="card-text">{props.text}
+        <div className="card">
+  <img src={props.img} className="card-img-top" alt={props.type.toUpperCase() + " " + props.title}/>
+  <div className="card-body">
+    <h5 className="card-title">{props.title}</h5>
+    <p className="card-text">{props.text}
     </p>
-    <Link to={`/${props.type}/${props.id}`} class="btn btn-dark">
+    <Link to={`/${props.type}/${props.id}`} className="btn btn-dark">
         Ver Detalles
         </Link>
   </div>
