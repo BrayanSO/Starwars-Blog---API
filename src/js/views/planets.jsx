@@ -2,6 +2,7 @@ import React, {useState, useEffect, useContext} from "react";
 import { Link } from "react-router-dom";
 import CardList from "../component/cardList.jsx";
 import { Context } from "../store/appContext.jsx";
+import Pagination from "../component/pagination.jsx";
 
 export const Planets = () => {
 	const {store, actions}= useContext (Context);
