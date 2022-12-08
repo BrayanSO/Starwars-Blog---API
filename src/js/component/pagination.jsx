@@ -11,7 +11,12 @@ const Pagination = (props) => {
     <nav>
     <ul className="pagination">
       <li className={"page-item" + props.currentPage == 1 ? " disable" : ""}>
-        <a className="page-link">Previous</a>
+        <Link 
+        className="page-link"
+        to={props.currentPage == 1 ? "#":`/${props.type}?page=${parseInt(props.currentPage)- 1}`}
+        >
+          Anterior
+          </Link>
       </li>
         {Array(props.pages).fill("").map((val, page)=> (
             <li
@@ -27,12 +32,13 @@ const Pagination = (props) => {
               ))}
       <li
        className={
-        "page-item"+ props.currentPage == props.pages? "disable":""
-    }
-    >
-        <a className="page-link" href="#">
-        Next
-        </a>
+        "page-item"+ props.currentPage == props.pages?  "disable":""} >
+         <Link 
+         className="page-link" 
+         to={
+          props.currentPage == props.pages 
+          ? "#"
+          :`/${props.type}?page=${parseInt(props.currentPage) + 1}`}>Siguiente</Link>
       </li>
     </ul>
   </nav>

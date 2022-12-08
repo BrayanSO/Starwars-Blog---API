@@ -27,8 +27,8 @@ export const Navbar = () => {
         </button>
         <div  className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav">
-           { links.map((link) => (
-              <li className="nav-item">
+           { links.map((link, index) => (
+              <li key={index} className="nav-item">
                 <Link className="nav-link" to={link.link}>{link.text}</Link>
               </li>
             ))}
