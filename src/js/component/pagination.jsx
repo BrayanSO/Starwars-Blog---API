@@ -9,32 +9,33 @@ const Pagination = (props) => {
 
     return(
     <nav>
-    <ul classNmae="pagination">
-      <li className={"page-item" + props.currenPage == 1 ? " disable" : ""}>
+    <ul className="pagination">
+      <li className={"page-item" + props.currentPage == 1 ? " disable" : ""}>
         <a className="page-link">Previous</a>
       </li>
-        {Array(props.pages).map((val, page)=> (
+        {Array(props.pages).fill("").map((val, page)=> (
             <li
+             key={page}
              className={`page-item${
-                props.currenPage == page + 1 ? "active":"" 
+                props.currentPage == page + 1 ? "active":"" 
         }`}
         >
-            <Link className="page-link" to={`/${type}?page=${page+1}`}>
-                      ${page + 1}
+            <Link className="page-link" to={`/${props.type}?page=${page+1}`}>
+                      {page + 1}
               </Link>
               </li>
               ))}
-    
-      <li class={"page-item"+ props.currenPage==props.pages? "disable":""
+      <li
+       className={
+        "page-item"+ props.currentPage == props.pages? "disable":""
     }
     >
-        <a class="page-link" href="#">
+        <a className="page-link" href="#">
         Next
         </a>
       </li>
     </ul>
-      </nav>
-  )
-  
-}
+  </nav>
+  );
+};
 export default Pagination
