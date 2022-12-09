@@ -3,9 +3,12 @@ import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   const [links, setLinks]=useState([
-    { text:"Planets", link:"/planets"},
+    { text:"Characters", link:"/Characters"},
     { text:"Films", link:"/films"},
-    { text:"Starships", link:"/starships"}
+    { text:"Species", link:"/species"},
+    { text:"Starships", link:"/starships"},
+    { text:"Vehicles", link:"/Vehicles"},
+    { text:"Planets", link:"/planets"}
 
   ]);
   return (
@@ -40,7 +43,7 @@ export const Navbar = () => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Dropdown link
+                Favorites
               </a>
               <ul className="dropdown-menu">
                 <li>
