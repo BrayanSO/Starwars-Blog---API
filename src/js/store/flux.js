@@ -37,6 +37,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 					pages:data.total_pages|| null
 				}
 		},
+		getStarWarsDetail: async (resource,id)=> {
+			let resp=await fetch (`https://www.swapi.tech/api/${resource}/${id}`)
+			if(!resp.ok){
+				console.error(`Error: ${resp.status}: ${resp.statusText}`)
+				return
+			}
+			let data=await resp.json()
+			return {
+				...data.result.properties
+			}
+		}
 	}
 
 	};
