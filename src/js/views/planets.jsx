@@ -10,13 +10,24 @@ export const Planets = () => {
   const [pages, setPages]=useState (0)
   const [records, setRecords]=useState (0)
 
-  useEffect(async() => {
-     const resp= await actions.getStarWars("planets");
-     if(resp){
-      setPages(resp.pages);
-      setRecords(resp.records);
+  useEffect(() => {
+    actions.getStarWars("planets").then (resp=>{
+      if(resp){
+        setPages(resp.pages);
+        setRecords(resp.records); 
      }
+    });
   }, []);
+
+  useEffect(()=>{
+    actions.getStarWars("planets",{page:searchParams.get("page")}).then (resp=>{
+      if(resp){
+        setPages(resp.pages);
+        setRecords(resp.records); 
+     }
+    });
+  },[searchParams.get("page")]
+  )
   return (
     <div className="container">
       <h1>Planets</h1>
