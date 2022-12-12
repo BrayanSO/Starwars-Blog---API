@@ -1,3 +1,5 @@
+import { element } from "prop-types"
+
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
@@ -7,14 +9,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 			people:[],
 			species:[],
 			starships:[],
-			vehicles:[]
+			vehicles:[],
+			favorites:[]
 		},
 		actions: {
 			getStarWars:async (resource, pagination= {})=> {
 				/*pagination 
 				page: representa la pagina a mostrar
 				limit: cuantos elementtos maximos se van a mostrar
-
 				*/
 				let params=""
 				if(!!pagination.page){
@@ -47,6 +49,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 			return {
 				...data.result.properties
 			}
+		},
+		addFavorites:(element) => {
+			let currentStore=getStore()
+			setStore({...currentStore,
+				favorites: [...currentStore.favorites, element]
+				 })
+
+		},
+		removeFavorites:(index)=> {
+			let currentStore=getStore()
+			let newFavorites=[...currentStore.favorites]
+			newFavorites.splice(index,1)
+			setStore({...currentStore,favorites:newFavorites
+			})
 		}
 	}
 

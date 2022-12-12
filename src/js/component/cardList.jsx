@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useContext} from "react";
 import { Link } from "react-router-dom";
+import { Context } from "../store/appContext.jsx";
 
 const CardList=(props) => {
     /* props:
@@ -8,9 +9,20 @@ const CardList=(props) => {
     title
     img
     */
+    const {store, actions} = useContext (Context)
+
+   function imgError(e){
+    console.log("Error:" + e.target.src);
+    e.target.src = "https://cdn.dribbble.com/users/490588/screenshots/3329226/star_wars_404.png";
+   }
+   function handleFavorites (data) {
+        actions.addFavo(data);
+   }
     return(
         <div className="card">
-  <img src={props.img} className="card-img-top" alt={props.type.toUpperCase() + " " + props.title}/>
+  <img src={props.img} className="card-img-top" alt={props.type.toUpperCase() + " " + props.title}
+    onError={imgError}
+  />
   <div className="card-body">
     <h5 className="card-title">{props.title}</h5>
     <p className="card-text">{props.text}
@@ -18,6 +30,12 @@ const CardList=(props) => {
     <Link to={`/${props.type}/${props.id}`} className="btn btn-dark">
         Ver Detalles
         </Link>
+        <button onClick={()=>handleFavorites({ 
+            name: props.title,
+            link:`/${props.type}/${props.id}`,
+        })}
+        
+        className="btn btn-outline-secondary"><i className="bi bi-suit-heart"></i></button>
   </div>
 </div>
     )
