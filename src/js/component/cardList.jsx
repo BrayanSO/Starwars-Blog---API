@@ -16,8 +16,14 @@ const CardList=(props) => {
     e.target.src = "https://cdn.dribbble.com/users/490588/screenshots/3329226/star_wars_404.png";
    }
    function handleFavorites (data) {
-        actions.addFavo(data);
-   }
+    let favoriteIndex=store.favorites.findIndex(
+      (fav)=>fav.link==data.link)
+    if(favoriteIndex==-1){
+      actions.addFavorites(data);
+    } else {  
+        actions.removeFavorites(favoriteIndex);
+     }
+    }
     return(
         <div className="card">
   <img src={props.img} className="card-img-top" alt={props.type.toUpperCase() + " " + props.title}

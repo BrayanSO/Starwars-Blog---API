@@ -64,7 +64,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 			setStore({...currentStore,favorites:newFavorites
 			})
 		}
-	}
+	},
+      handleFavorites: (data)=> {
+		let storeActions = getActions()
+		let favoriteIndex=getStore().favorites.findIndex(
+		  (fav)=>fav.link==data.link)
+		if(favoriteIndex==-1){
+		  storeActions.addFavorites(data);
+		} else {  
+			storeActions.removeFavorites(favoriteIndex);
+		 }
+		}
 
 	};
 };
