@@ -11,7 +11,7 @@ export const Home = () => (
 		      style={{
 				overflowY:"hidden ",
 				 overflowX: "scroll",
-				  maxWidth:"800px",
+				  maxWidth:"1000px",
 				   margin:"auto"}}  >
 			<li className="list-group-item" style={{height:"350px"}}>
 			<CardList
@@ -20,7 +20,6 @@ export const Home = () => (
                 title={1}
                 text="A StarWars Planet"
                 img={`https://starwars-visualguide.com/assets/img/1/${1}.jpg`}
-				
               />
 			</li>
 			<li className="list-group-item">
