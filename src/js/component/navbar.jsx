@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   const [links, setLinks]=useState([
-    { text:"Characters", link:"/Characters"},
+    { text:"Characters", link:"/characters"},
     { text:"Films", link:"/films"},
     { text:"Species", link:"/species"},
     { text:"Starships", link:"/starships"},

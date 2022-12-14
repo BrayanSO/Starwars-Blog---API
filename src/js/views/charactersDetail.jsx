@@ -4,30 +4,31 @@ import { useParams } from "react-router-dom";
 import CardDetail from "../component/cardDetail.jsx";
 
 import { Context } from "../store/appContext.jsx";
-export const FilmsDetail = () => {
+export const CharactersDetail = () => {
 	const {store, actions} = useContext(Context);
 	const [data, setData] = useState ({})
-	const {filmsid}=useParams();
+	const {peopleid}=useParams();
 	useEffect(()=>{
-				actions.getStarWarsDetail("films", filmsid).then(resp=>setData(resp))
+				actions.getStarWarsDetail("people", peopleid).then(resp=>setData(resp))
 	},[] )
 	return (
 		<div className="container flex-row">
-		<h1>Films {data.name}</h1>
+		<h1>character {data.name}</h1>
 		<CardDetail
 		title={data.name}
-		img={`https://starwars-visualguide.com/assets/img/films/${filmsid}.jpg`}
+		img={`https://starwars-visualguide.com/assets/img/characters/${people.uid}.jpg`}
 		body={
 			<ul>
-<li>Title: {data.title}</li>
-<li>Director: {data.director} </li>
-<li>Episode_id{data.episode_id} </li>
-<li>Release date: {data.release_date}</li>
-<li>Edited {data.edited}</li>
+ <li>name:{data.name}</li>
+<li>birth_year:{data.birth_year}</li>
+<li>films:{data.films}</li>
+<li>gender:{data.gender}</li>
+<li>height:{data.height}</li>
+<li>homeworld:{data.homeworld}</li>
 			</ul>
 		}
-		type="film"
+		type="people"
 		/>
 		</div>
 	);
-};
+    };

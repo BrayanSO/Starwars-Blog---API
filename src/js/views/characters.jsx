@@ -31,17 +31,17 @@ export const Characters = () => {
   return (
     <div className="container">
       <h1>characters</h1>
-      <h5> Total de personaes encontrados {records}</h5>
+      <h5> Total de personajes encontrados {records}</h5>
       <div className="container">
         <div className="row">
-          {store.people.map((people) => (
-            <div key={people.uid} className="col col-md-4">
+          {store.people.map((characters) => (
+            <div key={characters.uid} className="col col-md-4">
               <CardList
-                id={people.uid}
+                id={characters.uid}
                 type="people"
-                title={people.name}
+                title={characters.name}
                 text="A StarWars Characters"
-                img={`https://starwars-visualguide.com/assets/img/characters/${people.uid}.jpg`}
+                img={`https://starwars-visualguide.com/assets/img/characters/${characters.uid}.jpg`}
               />
             </div>
           ))}
