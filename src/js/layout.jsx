@@ -19,6 +19,7 @@ import {CardList} from "./component/cardList.jsx";
 import injectContext from "./store/appContext.jsx";
 import { Navbar } from "./component/navbar.jsx";
 import { Footer } from "./component/footer.jsx";
+import { SpeciesDetail } from "./views/speciesDetail.jsx";
 
 //create your first component
 const Layout = () => {
@@ -36,6 +37,7 @@ const Layout = () => {
 						<Route path="/characters" element={<Characters/>} />
 						<Route path="/characters/:charactersid" element={<CharactersDetail/>} />
 						<Route path="/species" element={<Species/>} />
+						<Route path="/species/:speciesid" element={<SpeciesDetail/>} />
 						<Route path="/vehicles" element={<Vehicles/>} />
 						<Route path="/starships" element={<Starships/>} />
 						<Route path="/starships/:starshipsid" element={<StarshipsDetail/>} />

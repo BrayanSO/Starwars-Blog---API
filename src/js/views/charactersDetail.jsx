@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import CardDetail from "../component/cardDetail.jsx";
 
 import { Context } from "../store/appContext.jsx";
+import { Characters } from "./characters.jsx";
 export const CharactersDetail = () => {
 	const {store, actions} = useContext(Context);
 	const [data, setData] = useState ({})
@@ -16,7 +17,7 @@ export const CharactersDetail = () => {
 		<h1>character {data.name}</h1>
 		<CardDetail
 		title={data.name}
-		img={`https://starwars-visualguide.com/assets/img/characters/${people.uid}.jpg`}
+		img={`https://starwars-visualguide.com/assets/img/characters/${characters.uid}.jpg`}
 		body={
 			<ul>
  <li>name:{data.name}</li>
@@ -27,7 +28,7 @@ export const CharactersDetail = () => {
 <li>homeworld:{data.homeworld}</li>
 			</ul>
 		}
-		type="people"
+		type="characters"
 		/>
 		</div>
 	);
