@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import { Context } from "../store/appContext.jsx";
 
 export const Navbar = () => {
   const [links, setLinks]=useState([
@@ -11,6 +12,7 @@ export const Navbar = () => {
     { text:"Planets", link:"/planets"}
 
   ]);
+  const {store, actions} = useContext(Context);
   return (
     <nav className="navbar navbar-light navbar-expand-md bg-light">
       <div className="container-fluid">
@@ -46,11 +48,12 @@ export const Navbar = () => {
                 Favorites
               </a>
               <ul className="dropdown-menu">
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Favoritos
-                  </a>
-                </li>
+                { store.favorites.map((item, index) => (
+              <li key={index} className="dropdown-item">
+                <Link to={item.link}>{item.name}</Link>
+              </li>
+            ))}
+            {store.favorites<=0? <li className="dropdown-item"> Sin favoritos </li> : null}
               </ul>
             </li>
           </ul>

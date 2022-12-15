@@ -2,8 +2,8 @@ import React, {useState, useEffect, useContext} from "react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import CardDetail from "../component/cardDetail.jsx";
-
 import { Context } from "../store/appContext.jsx";
+
 export const PlanetsDetail = () => {
 	const {store, actions} = useContext(Context);
 	const [data, setData] = useState ({})

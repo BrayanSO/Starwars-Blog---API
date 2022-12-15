@@ -21,7 +21,7 @@ const CardDetail=(props)=> {
           <div className="col-md-8">
             <div className="card-body">
               <h5 className="card-title">{props.title}</h5>
-              <p className="card-text">{props.body}</p>
+              <span className="card-text">{props.body}</span>
               <Link to={-1} className="btn btn-primary">Atras</Link>
             </div>
           </div>

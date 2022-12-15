@@ -49,7 +49,7 @@ export const Characters = () => {
        <div className="row">
 		<div className="col">
             <Pagination pages={pages} currentPage={searchParams.get("page") || "1"} 
-            type={"people"} />
+            type={"characters"} />
           </div>
         </div>
       </div>

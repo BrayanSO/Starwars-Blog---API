@@ -2,22 +2,22 @@ import React, {useState, useEffect, useContext} from "react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import CardDetail from "../component/cardDetail.jsx";
-
 import { Context } from "../store/appContext.jsx";
-import { Characters } from "./characters.jsx";
+
 export const CharactersDetail = () => {
 	const {store, actions} = useContext(Context);
 	const [data, setData] = useState ({})
-	const {peopleid}=useParams();
+	const peopleid=useParams();
 	useEffect(()=>{
-				actions.getStarWarsDetail("people", peopleid).then(resp=>setData(resp))
+		console.log(peopleid.charactersid);
+				actions.getStarWarsDetail("people", peopleid.charactersid).then(resp=>setData(resp))
 	},[] )
 	return (
 		<div className="container flex-row">
 		<h1>character {data.name}</h1>
 		<CardDetail
 		title={data.name}
-		img={`https://starwars-visualguide.com/assets/img/characters/${characters.uid}.jpg`}
+		img={`https://starwars-visualguide.com/assets/img/characters/${peopleid.charactersid}.jpg`}
 		body={
 			<ul>
  <li>name:{data.name}</li>
