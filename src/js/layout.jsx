@@ -7,6 +7,7 @@ import { Characters } from "./views/characters.jsx";
 import { CharactersDetail } from "./views/charactersDetail.jsx";
 import { Species } from "./views/species.jsx";
 import { Vehicles } from "./views/vehicles.jsx";
+import { VehiclesDetail } from "./views/vehiclesDetail.jsx";
 import { Planets} from "./views/planets.jsx";
 import { PlanetsDetail } from "./views/planetsDetail.jsx";
 import { Films } from "./views/films.jsx";
@@ -39,6 +40,7 @@ const Layout = () => {
 						<Route path="/species" element={<Species/>} />
 						<Route path="/species/:speciesid" element={<SpeciesDetail/>} />
 						<Route path="/vehicles" element={<Vehicles/>} />
+						<Route path="/vehicles/:vehiclesid" element={<VehiclesDetail/>} />
 						<Route path="/starships" element={<Starships/>} />
 						<Route path="/starships/:starshipsid" element={<StarshipsDetail/>} />
 						<Route path="/planets" element={<Planets/>} />

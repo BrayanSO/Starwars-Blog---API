@@ -20,12 +20,10 @@ export const CharactersDetail = () => {
 		img={`https://starwars-visualguide.com/assets/img/characters/${peopleid.charactersid}.jpg`}
 		body={
 			<ul>
- <li>name:{data.name}</li>
-<li>birth_year:{data.birth_year}</li>
-<li>films:{data.films}</li>
-<li>gender:{data.gender}</li>
-<li>height:{data.height}</li>
-<li>homeworld:{data.homeworld}</li>
+ <li>Name: {data.name}</li>
+<li>Birth year: {data.birth_year}</li>
+<li>Gender: {data.gender}</li>
+<li>Height: {data.height}</li>
 			</ul>
 		}
 		type="characters"

@@ -19,16 +19,15 @@ export const SpeciesDetail = () => {
 		img={`https://starwars-visualguide.com/assets/img/species/${speciesid}.jpg`}
 		body={
 			<ul>
-<li>name:{data.name} </li>
-<li>average_height{data.average_height}</li>
-<li>average_lifespan{data.average_lifespan}</li>
-<li>classification{data.classification}</li>
-<li>created{data.created}</li>
-<li>designation{data.designation}</li>
-<li>edited{data.edited}</li>
-<li>eye_colors{data.eye_colors}</li>
-<li>hair_colors{data.hair_colors}</li>
-<li>language{data.language}</li>
+<li>Average height: {data.average_height}</li>
+<li>Average lifespan: {data.average_lifespan}</li>
+<li>Classification: {data.classification}</li>
+<li>Created: {data.created}</li>
+<li>Designation: {data.designation}</li>
+<li>Edited: {data.edited}</li>
+<li>Eye colors: {data.eye_colors}</li>
+<li>Hair colors :{data.hair_colors}</li>
+<li>Language: {data.language}</li>
 
 
 			</ul>
