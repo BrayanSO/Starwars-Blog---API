@@ -4,14 +4,14 @@ import CardList from "../component/cardList.jsx";
 import { Context } from "../store/appContext.jsx";
 import Pagination from "../component/pagination.jsx";
 
-export const Species = () => {
+export const StarshipsList = () => {
   const { store, actions } = useContext(Context);
   const [searchParams, setSearchParams] = useSearchParams();
   const [pages, setPages]=useState (0)
   const [records, setRecords]=useState (0)
 
   useEffect(() => {
-    actions.getStarWars("species").then (resp=>{
+    actions.getStarWars("starships").then (resp=>{
       if(resp){
         setPages(resp.pages);
         setRecords(resp.records); 
@@ -20,7 +20,7 @@ export const Species = () => {
   }, []);
 
   useEffect(()=>{
-    actions.getStarWars("species",{page:searchParams.get("page")}).then (resp=>{
+    actions.getStarWars("starships",{page:searchParams.get("page")}).then (resp=>{
       if(resp){
         setPages(resp.pages);
         setRecords(resp.records); 
@@ -30,25 +30,23 @@ export const Species = () => {
   )
   return (
     <div className="container">
-      <h1>Species</h1>
+      <h1>starships</h1>
       <div className="container">
-        <div className="row">
-          {store.species.map((species) => (
-            <div key={species.uid} className="col col-md-4">
+        <div className="row flex-nowrap">
+          {store.starships.map((starships) => (
+            <div key={starships.uid} className="col col-md-4">
               <CardList
-                id={species.uid}
-                type="species"
-                title={species.name}
-                text="A StarWars Characters"
-                img={`https://starwars-visualguide.com/assets/img/species/${species.uid}.jpg`}
+                id={starships.uid}
+                type="starships"
+                title={starships.name}
+                text="A StarWars starships"
+                img={`https://starwars-visualguide.com/assets/img/starships/${starships.uid}.jpg`}
               />
             </div>
           ))}
         </div>
        <div className="row">
 		<div className="col">
-            <Pagination pages={pages} currentPage={searchParams.get("page") || "1"} 
-            type={"species"} />
           </div>
         </div>
       </div>

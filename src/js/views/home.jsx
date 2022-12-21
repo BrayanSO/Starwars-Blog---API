@@ -2,63 +2,34 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../../styles/home.css";
 import CardList from "../component/cardList.jsx";
+import CharacterList from "../component/characterList.js";
+import PlanetsList from "../component/planetList";
+import { FilmsList } from "../component/filmList";
+import { SpeciesList } from "../component/speciesList";
+import { StarshipsList } from "../component/starships";
+import { VehiclesList } from "../component/vehicles";
 
 
 export const Home = () => (
 	<div className="text-center mt-5" >
-		<h1>Hello Rigo!</h1>
-		<ul className="list-group-horizontal d-flex "
-		      style={{
-				overflowY:"hidden ",
-				 overflowX: "scroll",
-				  maxWidth:"1000px",
-				   margin:"auto"}}  >
-			<li className="list-group-item" style={{height:"350px"}}>
-			<CardList
-                id={1}
-                type="planets"
-                title={1}
-                text="A StarWars Planet"
-                img={`https://starwars-visualguide.com/assets/img/1/${1}.jpg`}
-              />
-			</li>
-			<li className="list-group-item">
-			<CardList
-                id={1}
-                type="planets"
-                title={1}
-                text="A StarWars Planet"
-                img={`https://starwars-visualguide.com/assets/img/1/${1}.jpg`}
-              />
-			</li>
-			<li className="list-group-item">
-			<CardList
-                id={1}
-                type="planets"
-                title={1}
-                text="A StarWars Planet"
-                img={`https://starwars-visualguide.com/assets/img/1/${1}.jpg`}
-              />
-			</li>
-			<li className="list-group-item">
-			<CardList
-                id={1}
-                type="planets"
-                title={1}
-                text="A StarWars Planet"
-                img={`https://starwars-visualguide.com/assets/img/1/${1}.jpg`}
-              />
-			</li>
-			<li className="list-group-item">
-			<CardList
-                id={1}
-                type="planets"
-                title={1}
-                text="A StarWars Planet"
-                img={`https://starwars-visualguide.com/assets/img/1/${1}.jpg`}
-              />
-			</li>
-			
-		</ul>
+  <div style={{overflowY:"hidden ", overflowX: "scroll",  maxWidth:"1000px",  margin:"auto"}}>
+      <CharacterList/>
+    </div>
+    <div style={{overflowY:"hidden ", overflowX: "scroll",  maxWidth:"1000px",  margin:"auto"}}>
+      <FilmsList/>
+    </div>
+    <div style={{overflowY:"hidden ", overflowX: "scroll",  maxWidth:"1000px",  margin:"auto"}}>
+      <SpeciesList/>
+    </div>
+    <div style={{overflowY:"hidden ", overflowX: "scroll",  maxWidth:"1000px",  margin:"auto"}}>
+      <StarshipsList/>
+    </div>
+    <div style={{overflowY:"hidden ", overflowX: "scroll",  maxWidth:"1000px",  margin:"auto"}}>
+      <VehiclesList/>
+    </div>
+    <div  style={{overflowY:"hidden ", overflowX: "scroll",  maxWidth:"1000px",  margin:"auto"}}>
+      <PlanetsList/>
+    </div>
+    
 	</div>
 );

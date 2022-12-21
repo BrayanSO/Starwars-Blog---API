@@ -4,7 +4,7 @@ import CardList from "../component/cardList.jsx";
 import { Context } from "../store/appContext.jsx";
 import Pagination from "../component/pagination.jsx";
 
-export const Species = () => {
+export const SpeciesList = () => {
   const { store, actions } = useContext(Context);
   const [searchParams, setSearchParams] = useSearchParams();
   const [pages, setPages]=useState (0)
@@ -32,7 +32,7 @@ export const Species = () => {
     <div className="container">
       <h1>Species</h1>
       <div className="container">
-        <div className="row">
+        <div className="row flex-nowrap">
           {store.species.map((species) => (
             <div key={species.uid} className="col col-md-4">
               <CardList
@@ -47,8 +47,6 @@ export const Species = () => {
         </div>
        <div className="row">
 		<div className="col">
-            <Pagination pages={pages} currentPage={searchParams.get("page") || "1"} 
-            type={"species"} />
           </div>
         </div>
       </div>
