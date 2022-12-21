@@ -12,22 +12,22 @@ import { VehiclesList } from "../component/vehicles";
 
 export const Home = () => (
 	<div className="text-center mt-5" >
-  <div style={{overflowY:"hidden ", overflowX: "scroll",  maxWidth:"1000px",  margin:"auto"}}>
+  <div style={{overflowY:"hidden ", overflowX: "scroll",  maxWidth:"800px",  margin:"auto"}}>
       <CharacterList/>
     </div>
-    <div style={{overflowY:"hidden ", overflowX: "scroll",  maxWidth:"1000px",  margin:"auto"}}>
+    <div style={{overflowY:"hidden ", overflowX: "scroll",  maxWidth:"800px",  margin:"auto"}}>
       <FilmsList/>
     </div>
-    <div style={{overflowY:"hidden ", overflowX: "scroll",  maxWidth:"1000px",  margin:"auto"}}>
+    <div style={{overflowY:"hidden ", overflowX: "scroll",  maxWidth:"800px",  margin:"auto"}}>
       <SpeciesList/>
     </div>
-    <div style={{overflowY:"hidden ", overflowX: "scroll",  maxWidth:"1000px",  margin:"auto"}}>
+    <div style={{overflowY:"hidden ", overflowX: "scroll",  maxWidth:"800px",  margin:"auto"}}>
       <StarshipsList/>
     </div>
-    <div style={{overflowY:"hidden ", overflowX: "scroll",  maxWidth:"1000px",  margin:"auto"}}>
+    <div style={{overflowY:"hidden ", overflowX: "scroll",  maxWidth:"800px",  margin:"auto"}}>
       <VehiclesList/>
     </div>
-    <div  style={{overflowY:"hidden ", overflowX: "scroll",  maxWidth:"1000px",  margin:"auto"}}>
+    <div  style={{overflowY:"hidden ", overflowX: "scroll",  maxWidth:"800px",  margin:"auto"}}>
       <PlanetsList/>
     </div>
     

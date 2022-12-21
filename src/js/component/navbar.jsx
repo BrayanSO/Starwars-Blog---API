@@ -21,10 +21,10 @@ function removeFavorites(index){
 
   const {store, actions} = useContext(Context);
   return (
-    <nav className="navbar navbar-light navbar-expand-md bg-light">
-      <div className="container-fluid">
+    <nav className="navbar navbar-light navbar-expand-md bg-light ">
+      <div className="container-fluid ">
         <Link to="/" className="navbar-brand" >
-          StarWars
+        <img src="https://img.icons8.com/ios/50/null/star-wars.png"/>
         </Link>
         <button
           className="navbar-toggler"
