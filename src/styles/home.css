@@ -1,7 +1,45 @@
 body {
     background-color: black;
-    color: gray;
 }
 h1 {
     color:rgb(160, 16, 16)
+}
+h5 {
+    color: white;   
+}
+.container {
+    color: black;
+}
+.navbar { 
+    font-size: large;
+    margin-top: 10px;
+    color: black !important;
+}
+p {
+    color: black;
+}
+.icon {
+    border: none !important;
+    border-color: aliceblue;
+    border: none; 
+}
+#foot{
+    color: white;
+}
+#iconbas{
+    border-color: transparent;
+    padding: 3px;
+    background-color: transparent;
+    
+}
+span {
+    background-color: grey;
+    border-radius: 10px;
+    margin: 2px;
+    padding: 5px;
+    color: white;
+}
+button{
+    border: none;
+    background-color: transparent;
 }

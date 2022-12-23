@@ -29,8 +29,8 @@ const CardList=(props) => {
   <img src={props.img} className="card-img-top" alt={props.type.toUpperCase() + " " + props.title}
     onError={imgError}
   />
-  <div className="card-body">
-    <h5 className="card-title">{props.title}</h5>
+  <div className="card-body ">
+    <h5 className="card-title text-secondary">{props.title}</h5>
     <p className="card-text">{props.text}
     </p>
     <Link to={`/${props.type}/${props.id}`} className="btn btn-dark">

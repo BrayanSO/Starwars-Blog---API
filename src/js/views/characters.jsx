@@ -30,7 +30,7 @@ export const Characters = () => {
   )
   return (
     <div className="container">
-      <h1>characters</h1>
+      <h1>Characters</h1>
       <h5> Total de personajes encontrados {records}</h5>
       <div className="container">
         <div className="row">

@@ -1,6 +1,7 @@
 import React, { useState, useContext  } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext.jsx";
+import "../../styles/home.css";
 
 export const Navbar = () => {
   const [links, setLinks]=useState([
@@ -14,8 +15,8 @@ export const Navbar = () => {
 
   const {store, actions} = useContext(Context);
   return (
-    <nav className="navbar navbar-light navbar-expand-md bg-light ">
-      <div className="container-fluid ">
+    <nav id="navbar" className="navbar navbar-light navbar-expand-md bg-light   ">
+      <div className="container-fluid  ">
         <Link to="/" className="navbar-brand" >
         <img src="https://img.icons8.com/ios/50/null/star-wars.png"/>
         </Link>
@@ -30,14 +31,14 @@ export const Navbar = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div  className="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul className="navbar-nav">
+        <div className="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul  className="navbar-nav">
            { links.map((link, index) => (
               <li key={index} className="nav-item">
                 <Link className="nav-link" to={link.link}>{link.text}</Link>
               </li>
             ))}
-            <li className="nav-item dropdown ml-auto">
+            <li id="navstyle" className="nav-item dropdown ml-auto">
               <a
                 className="nav-link dropdown-toggle"
                 href="#"
@@ -45,13 +46,17 @@ export const Navbar = () => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Favorites {store.favorites.length}
+                Favorites <span>{store.favorites.length}</span>
               </a>
               <ul className="dropdown-menu">
                 { store.favorites.map((item, index) => (
               <li key={index} className="dropdown-item">
                 <Link to={item.link}>{item.name}</Link>
-                <button onClick={()=>actions.removeFavorites(index)}> <i className="bi bi-trash3-fill"></i></button>
+                <button onClick={()=>actions.removeFavorites(index)}>
+                  <div>
+                   <i id="iconbas" className="icon bi bi-trash3-fill"></i>
+                   </div>
+                   </button>
               </li>
             ))}
             {store.favorites<=0? <li className="dropdown-item"> Sin favoritos </li> : null}
