@@ -11,13 +11,6 @@ export const Navbar = () => {
     { text:"Vehicles", link:"/Vehicles"},
     { text:"Planets", link:"/planets"}
 ]); 
-const [favorites, setFavorites]= useState("")
-
-function removeFavorites(index){
-  let favorites= [...favorites]
-  newFavorites.splice(index,-1)
-  setFavorites(newFavorites)
-}
 
   const {store, actions} = useContext(Context);
   return (
@@ -58,7 +51,7 @@ function removeFavorites(index){
                 { store.favorites.map((item, index) => (
               <li key={index} className="dropdown-item">
                 <Link to={item.link}>{item.name}</Link>
-                <button onClick={()=>removeFavorites(index)}> <i className="bi bi-trash3-fill"></i></button>
+                <button onClick={()=>actions.removeFavorites(index)}> <i className="bi bi-trash3-fill"></i></button>
               </li>
             ))}
             {store.favorites<=0? <li className="dropdown-item"> Sin favoritos </li> : null}
