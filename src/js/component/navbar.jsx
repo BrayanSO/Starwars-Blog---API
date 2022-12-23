@@ -15,10 +15,10 @@ export const Navbar = () => {
 
   const {store, actions} = useContext(Context);
   return (
-    <nav id="navbar" className="navbar navbar-light navbar-expand-md bg-light   ">
-      <div className="container-fluid  ">
+    <nav id="navbar" className="navbar navbar-light navbar-expand-md navbar-dark shadow-5-strong   ">
+      <div className="container  ">
         <Link to="/" className="navbar-brand" >
-        <img src="https://img.icons8.com/ios/50/null/star-wars.png"/>
+        <img id="logo" src="https://img.icons8.com/ios/100/null/star-wars.png"/>
         </Link>
         <button
           className="navbar-toggler"
@@ -31,7 +31,7 @@ export const Navbar = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNavDropdown">
+        <div className="collapse navbar-collapse" >
           <ul  className="navbar-nav">
            { links.map((link, index) => (
               <li key={index} className="nav-item">

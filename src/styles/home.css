@@ -1,5 +1,5 @@
 body {
-    background-color: black;
+    background-image: url(https://images.alphacoders.com/107/107763.jpg);
 }
 h1 {
     color:rgb(160, 16, 16)
@@ -10,10 +10,12 @@ h5 {
 .container {
     color: black;
 }
-.navbar { 
+#navbar { 
     font-size: large;
-    margin-top: 10px;
-    color: black !important;
+    display: table;  
+    float: none !important;
+    margin: auto !important;
+    color: red;
 }
 p {
     color: black;
@@ -43,3 +45,12 @@ button{
     border: none;
     background-color: transparent;
 }
+#logo{
+     
+    width: 100px;
+    height: 100px;
+    background: white;
+    opacity: 1;
+    border-radius: 25px;
+
+} 
