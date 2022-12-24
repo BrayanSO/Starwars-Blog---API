@@ -1,5 +1,6 @@
 body {
-    background-image: url(https://images.alphacoders.com/107/107763.jpg);
+    background-image: url(https://cdn.pixabay.com/photo/2016/09/08/12/00/stars-1654074_960_720.jpg);
+    background-size:contain;
 }
 h1 {
     color:rgb(160, 16, 16)
