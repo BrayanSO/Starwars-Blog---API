@@ -29,7 +29,7 @@ export const Characters = () => {
   },[searchParams.get("page")]
   )
   return (
-    <div className="container">
+    <div className="container mt-2">
       <h1>Characters</h1>
       <h5> Total de personajes encontrados {records}</h5>
       <div className="container">

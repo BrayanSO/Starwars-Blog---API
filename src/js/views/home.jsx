@@ -11,8 +11,8 @@ import { VehiclesList } from "../component/vehicles";
 
 
 export const Home = () => (
-	<div className="text-center mt-5" >
-  <div style={{overflowY:"hidden ", overflowX: "scroll",  maxWidth:"800px",  margin:"auto"}}>
+	<div className="scroller text-center mt-5" >
+  <div style={{overflowY:"hidden ", overflowX: "scroll",  maxWidth:"800px", margin:"auto" }}>
       <CharacterList/>
     </div>
     <div style={{overflowY:"hidden ", overflowX: "scroll",  maxWidth:"800px",  margin:"auto"}}>

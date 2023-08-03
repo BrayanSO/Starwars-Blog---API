@@ -3,7 +3,10 @@ body {
     background-size:contain;
 }
 h1 {
-    color:rgb(160, 16, 16)
+    color:rgb(160, 16, 16);
+    text-align: center;
+
+    
 }
 h5 {
     color: white;   
@@ -55,3 +58,7 @@ button{
     border-radius: 25px;
 
 } 
+#scroller{
+        background-color: transparent;
+        color: red;
+}
