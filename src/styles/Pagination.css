@@ -1,0 +1,32 @@
+/* Cambiar el fondo y los bordes para lograr una barra de paginación transparente */
+.pagination {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    background-color: transparent; /* Fondo transparente */
+    border: none; /* Borde transparente */
+  }
+  
+  .page-item {
+    margin: 0 5px;
+  }
+  
+  .page-link {
+    text-decoration: none;
+    color: blue; /* Cambia este color según tus preferencias */
+  }
+  
+  .page-link:hover {
+    color: red; /* Cambia este color para el estado hover */
+  }
+  
+  .page-item.active .page-link {
+    color: green; /* Cambia este color para la página actual */
+  }
+  
+  .page-item.disabled .page-link {
+    pointer-events: none; /* Deshabilita los enlaces cuando están desactivados */
+    color: gray; /* Cambia este color para los enlaces desactivados */
+  }
+  
