@@ -29,7 +29,7 @@ export const Navbar = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          <i className="bi bi-grid-3x3-gap-fill"></i>
         </button>
         <div className="collapse navbar-collapse" >
           <ul  className="navbar-nav">
