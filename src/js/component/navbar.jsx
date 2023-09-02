@@ -18,7 +18,7 @@ export const Navbar = () => {
     <nav id="navbar" className="navbar navbar-light navbar-expand-md navbar-dark shadow-5-strong   ">
       <div className="container  ">
         <Link to="/" className="navbar-brand" >
-        <img id="logo" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExenZ0MWc2cmpxaGY1dTUwc3MzY2hteGtod2JxY3hobzFnZHk3ZzFyOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/qTlIo6jqW0Q9svwvKS/giphy.gif"/>
+        <img id="logo" src="https://media3.giphy.com/media/qMUgKxlzfUpwno5Ywr/giphy.gif?cid=ecf05e47en43q6b1yeshyb6k439klg1yn05c4ut6sc0i60by&ep=v1_gifs_related&rid=giphy.gif&ct=s"/>
         </Link>
         <button
           className="navbar-toggler"
