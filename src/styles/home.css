@@ -3,13 +3,13 @@ body {
     background-size:contain;
 }
 h1 {
-    color:rgb(160, 16, 16);
+    color:rgb(238, 8, 8);
     text-align: center;
 
     
 }
 h5 {
-    color: white;   
+    color: red;   
 }
 .container {
     color: black;
@@ -43,7 +43,7 @@ span {
     border-radius: 10px;
     margin: 2px;
     padding: 5px;
-    color: white;
+    color: black;
 }
 button{
     border: none;
@@ -51,8 +51,8 @@ button{
 }
 #logo{
      
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     background: transparent;
     opacity: 1;
     border-radius: 25px;

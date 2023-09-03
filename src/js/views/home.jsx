@@ -14,22 +14,22 @@ import { VehiclesList } from "../component/vehicles";
 
 export const Home = () => (
 	<div className="scroller text-center mt-5" >
-  <div className="custom-scrollbar-container" style={{overflowY:"hidden ", overflowX: "scroll",  maxWidth:"1000px", margin:"auto" }}>
+  <div className="custom-scrollbar-container " style={{overflowY:"hidden ", overflowX: "scroll",  maxWidth:"800px", margin:"auto" }}>
       <CharacterList/>
     </div>
-    <div className="custom-scrollbar-container" style={{overflowY:"hidden ", overflowX: "scroll",  maxWidth:"1000px",  margin:"auto"}}>
+    <div className="custom-scrollbar-container" style={{overflowY:"hidden ", overflowX: "scroll",  maxWidth:"800px",  margin:"auto"}}>
       <FilmsList/>
     </div>
-    <div className="custom-scrollbar-container" style={{overflowY:"hidden ", overflowX: "scroll",  maxWidth:"1000px",  margin:"auto"}}>
+    <div className="custom-scrollbar-container" style={{overflowY:"hidden ", overflowX: "scroll",  maxWidth:"800px",  margin:"auto"}}>
       <SpeciesList/>
     </div>
-    <div className="custom-scrollbar-container" style={{overflowY:"hidden ", overflowX: "scroll",  maxWidth:"1000px",  margin:"auto"}}>
+    <div className="custom-scrollbar-container" style={{overflowY:"hidden ", overflowX: "scroll",  maxWidth:"800px",  margin:"auto"}}>
       <StarshipsList/>
     </div>
-    <div className="custom-scrollbar-container" style={{overflowY:"hidden ", overflowX: "scroll",  maxWidth:"1000px",  margin:"auto"}}>
+    <div className="custom-scrollbar-container" style={{overflowY:"hidden ", overflowX: "scroll",  maxWidth:"800px",  margin:"auto"}}>
       <VehiclesList/>
     </div>
-    <div className="custom-scrollbar-container" style={{overflowY:"hidden ", overflowX: "scroll",  maxWidth:"1000px",  margin:"auto"}}>
+    <div className="custom-scrollbar-container" style={{overflowY:"hidden ", overflowX: "scroll",  maxWidth:"800px",  margin:"auto"}}>
       <PlanetsList/>
     </div>
     

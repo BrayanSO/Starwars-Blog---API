@@ -1,12 +1,15 @@
 /* ScrollbarStyles.css */
 .custom-scrollbar-container {
   /* Estilos para la barra de desplazamiento */
-  scrollbar-width: none; /* Ancho de la barra de desplazamiento en navegadores que lo soportan */
+   /* Ancho de la barra de desplazamiento en navegadores que lo soportan */
   scrollbar-color: #f1f1f1 #888; /* Color del riel y del pulgar */
+  
 }
 
 .custom-scrollbar-container::-webkit-scrollbar {
-  width: 10px; /* Ancho de la barra de desplazamiento */
+   /* Ancho de la barra de desplazamiento */
+  width: 30%;
+  height: 15px;
 }
 
 .custom-scrollbar-container::-webkit-scrollbar-track {
@@ -15,5 +18,7 @@
 
 .custom-scrollbar-container::-webkit-scrollbar-thumb {
   background-color:  #d6d6d6; /* Color del pulgar */
-  border-radius: 500px; /* Borde redondeado del pulgar */
+  border-radius: 500px; /* Borde redondeado del pulgar */  
+  
+  
 }
