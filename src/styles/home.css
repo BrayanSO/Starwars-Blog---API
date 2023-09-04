@@ -22,7 +22,7 @@ h5 {
     color: red;
 }
 p {
-    color: black;
+    color: white;
 }
 .icon {
     border: none !important;
@@ -39,11 +39,11 @@ p {
     
 }
 span {
-    background-color: grey;
+    background-color: transparent;
     border-radius: 10px;
     margin: 2px;
     padding: 5px;
-    color: black;
+    color: white;
 }
 button{
     border: none;
